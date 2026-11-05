@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StereoMate — align and finish stereo (3D) photos and videos</title>
+<meta name="description" content="StereoMate aligns and finishes stereoscopic (3D) photos and videos: automatic alignment, depth control, crop, floating window, colour matching, compositions, video clips, time-lapses and slide shows. Free and open source.">
+<style>
+  :root { --bg: #1b1d21; --panel: #25282e; --border: #3a3e46; --text: #e6e6e6; --muted: #9aa0aa; --accent: #4f9cf5; --warn: #e8c46a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, "Segoe UI", Arial, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 34px; margin: 0 0 4px; } h1 small { font-size: 15px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+  h2 { font-size: 20px; margin: 32px 0 8px; }
+  .lead { font-size: 18px; color: #cfd3da; margin: 0 0 20px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid var(--border); color: var(--text); background: var(--panel); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { filter: brightness(1.12); }
+  .warn { border: 1px solid #6b5a2a; background: #2b2717; border-radius: 8px; padding: 14px 18px; margin: 20px 0; }
+  .warn b { color: var(--warn); }
+  .warn ul { margin: 8px 0 0 20px; padding: 0; }
+  img { width: 100%; border-radius: 8px; border: 1px solid var(--border); display: block; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 24px; }
+  .grid div { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; }
+  .grid b { display: block; margin-bottom: 2px; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>StereoMate <small>version __VERSION__</small></h1>
+  <p class="lead">Aligns and finishes stereoscopic (3D) photos and videos: rotation, size, height and perspective of the two views,
+    the stereo window, depth control, crop, floating window and colour matching, then saves them in every common stereo format.
+    Compositions, video clips, time-lapses and slide shows too. Free and open source.</p>
+
+  <div class="btns">
+    <a class="btn primary" href="https://github.com/crunchy3d/StereoMate/releases/latest">Download the desktop program (Windows / Linux)</a>
+    <a class="btn" href="app/">Open the web version</a>
+    <a class="btn" href="https://github.com/crunchy3d/StereoMate#readme">All features</a>
+  </div>
+
+  <div class="warn">
+    <b>About the web version.</b> It runs completely in your browser, so your pictures are not uploaded anywhere.
+    It works fully only in <b>Chrome or Edge on a computer</b>, and it has <b>fewer capabilities than the desktop program</b>:
+    <ul>
+      <li>no ffmpeg: only MP4 / MOV video clips are read (no AVI, MKV …) and results cannot be converted with ffmpeg;</li>
+      <li>files cannot be deleted (to the recycle bin) from the program;</li>
+      <li>sessions cannot find the images by their paths: you choose their folder again when opening a session;</li>
+      <li>files cannot be opened by double-click or from the command line;</li>
+      <li>Firefox and Safari save into the Downloads folder and cannot read or render videos; phones and tablets are not supported;</li>
+      <li>very large images and long 4K videos are limited by the browser's memory.</li>
+    </ul>
+    For regular use, the <a href="https://github.com/crunchy3d/StereoMate/releases/latest">desktop program</a> is recommended.
+    The first start of the web version loads about 11 MB.
+  </div>
+
+  <img src="screenshots/01_main_anaglyph.jpg" alt="StereoMate main window with an aligned stereo pair shown as an anaglyph">
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div><b>Automatic alignment</b>Rotation, size, vertical shift and vertical / horizontal perspective from thousands of matched details; stereo window at the nearest object; manual points and fine-tuning.</div>
+    <div><b>Depth control</b>Positive, negative and overall depth with comfort warnings; the nearest and farthest points marked in the image.</div>
+    <div><b>Finishing</b>Crop, floating window, brightness and colour matching; anaglyph, side-by-side, Difference and flashing views.</div>
+    <div><b>All stereo formats</b>Left + right files, side-by-side, over-under, interleaved, MPO, JPS, anaglyph; whole folders and sessions.</div>
+    <div><b>Compose</b>Several images and video clips in one stereo picture or video, with frames and depth-safe layouts.</div>
+    <div><b>Video</b>Stereo clips with key frames, left + right files synchronised by sound, stereo from a mono video, time-lapses; MP4 with 3D tag.</div>
+    <div><b>Create stereo show</b>Slide show with motion, transitions, text slides, music and narration.</div>
+    <div><b>Second screen</b>Shows the finished image on another monitor, projector or 3D TV: side-by-side, top-bottom, interleaved, checkerboard, anaglyph.</div>
+  </div>
+
+  <h2>Questions and problems</h2>
+  <p>Please open an <a href="https://github.com/crunchy3d/StereoMate/issues">Issue on GitHub</a>.</p>
+
+  <footer>Programmed by Damir Vrančić and Claude, 2026 · MIT licence · uses OpenCV.js (Apache-2.0) ·
+    <a href="https://github.com/crunchy3d/StereoMate">github.com/crunchy3d/StereoMate</a></footer>
+</main>
+</body>
+</html>
