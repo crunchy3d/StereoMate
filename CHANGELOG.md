@@ -1,5 +1,12 @@
 # Changelog
 
+## V0.218 (November 2026)
+
+- **Frame rates:** rendered video clips, compositions and the stereo show use the frame rate of their videos by default (e.g. 25 fps); images-only shows and time-lapses use 30 fps. Every video output has a **Frames / s** field with **↺** (back to the default). A clip can be rendered at another rate (frames are repeated or skipped, the sound stays in sync).
+- **Frame-rate warnings:** when clips with different frame rates are combined, or the output rate differs from the source, an orange note explains it, and before rendering with uneven rates (e.g. 25 → 30) StereoMate asks: use the source rate, render anyway, or cancel. Exact multiples (25 ↔ 50) only get a note; 29.97 counts as 30.
+- **New views in the main window:** row interleaved and column interleaved (passive 3D monitors) and checkerboard (DLP 3D), drawn at screen pixels, with **Swap L / R**; the pattern follows when the window is moved.
+- **Size per view when saving** (Export): original, fit inside 1920 × 1080 or 3840 × 2160, fit inside any W × H, long side, width or scale (%), with **Never enlarge**; the size refers to one view and the resulting file size is shown.
+
 ## V0.217 (November 2026): first public version
 
 StereoMate has been developed privately since early 2026; this is the first version published on GitHub.
