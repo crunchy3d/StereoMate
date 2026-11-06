@@ -58,12 +58,13 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - **Crop** with fixed or free aspect ratio, edited directly on the image, snapping to the image borders.
 - **Floating window**: black stripes that bring the image edges forward (automatic or manual).
 - **Brightness and colour matching** of the two views (automatic, plus manual levels, contrast, saturation, temperature and tint).
-- Views: anaglyphs (several kinds, including Dubois), side-by-side parallel / cross-eyed, **Difference (L − R)**, alternating L / R (flashing), single view; zoom, magnifier and grid.
+- Views: anaglyphs (several kinds, including Dubois), side-by-side parallel / cross-eyed, **Difference (L − R)**, alternating L / R (flashing), **row / column interleaved** (passive 3D monitors) and **checkerboard** (DLP 3D), single view; zoom, magnifier and grid.
 
 ![Difference view: identical areas become grey](docs/screenshots/03_difference_view.jpg)
 
 ### Saving
 - Side-by-side (full / half, parallel / cross-eyed), over-under (full / half), **MPO**, separate left + right JPGs, interlaced, anaglyph.
+- **Size per view**: original, fit inside Full HD / 4K UHD / any size, long side, width or scale.
 - High-quality JPEG with selectable chroma subsampling; EXIF data kept; depth values in the file name (optional).
 - **Save all** saves the whole list (and renders all video clips).
 
@@ -75,7 +76,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 ![Compose: four stereo photos in one picture](docs/screenshots/04_compose.jpg)
 
 ### Video
-- **Stereo video clips** (side-by-side or top-bottom): one frame is aligned with all the tools above; **key frames** follow changes during the clip, then every frame is warped on the graphics card and saved as MP4 (H.264, HEVC, AV1 or VP9) with the 3D tag for YouTube and VR players.
+- **Stereo video clips** (side-by-side or top-bottom): one frame is aligned with all the tools above; **key frames** follow changes during the clip, then every frame is warped on the graphics card and saved as MP4 (H.264, HEVC, AV1 or VP9) with the 3D tag for YouTube and VR players. Videos keep the frame rate of their source by default; mixed frame rates are pointed out before rendering.
 - **Left + right video files** from two cameras: synchronised automatically by the sound (or by the motion).
 - **Stereo from a mono video** taken while moving sideways (car, train, walking): the delay between the two views is found for a chosen depth, optionally adapted during the clip.
 - **Time-lapses**: a folder of stereo images becomes one entry, aligned once (or with key frames) and rendered at any frame rate.
