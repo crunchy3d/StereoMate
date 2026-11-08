@@ -1,5 +1,15 @@
 # Changelog
 
+## V0.221 (November 2026)
+
+Changes since V0.218 (V0.219 and V0.220 were not published separately):
+
+- **Rotation of the views:** 90° clockwise, 180° or 90° counter-clockwise for the left and the right view, for all images (Input) or per image / clip (Fine-tuning) — for cameras mounted on their side or upside down and images without EXIF orientation. Works for images, time-lapses and video clips (rotated on the graphics card); the **rotation tag** of phone videos (left + right files, mono videos) is applied automatically.
+- **Apply to all images per section:** Fine-tuning, crop, floating window and manual brightness / colour values can each be copied to all other images; every such button (and *Apply current values to all images*) asks first and can be undone.
+- **Changed or renamed files:** when a session's files are missing, **Choose folder with changed files…** finds images corrected in another program by the same name, a detected name pattern (e.g. “_edit”, “-1”), an own rule or the EXIF capture time, shown in a table to confirm; **Choose replacements…** and **Replace file…** (one image or several images from a folder) work the same way. The images keep all their settings (scaled to a new size of the same shape).
+- **Shortcuts after editing a field:** a click on the image or the preview area leaves the edit field, so the keyboard shortcuts work at once.
+- **Crop editing:** the hint “Editing the crop…” is shown above the image instead of on it; fixed: clicking *✂ Edit crop on the image* could shift the whole window up.
+
 ## V0.218 (November 2026)
 
 - **Frame rates:** rendered video clips, compositions and the stereo show use the frame rate of their videos by default (e.g. 25 fps); images-only shows and time-lapses use 30 fps. Every video output has a **Frames / s** field with **↺** (back to the default). A clip can be rendered at another rate (frames are repeated or skipped, the sound stays in sync).
