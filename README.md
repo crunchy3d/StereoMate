@@ -37,15 +37,15 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 ### Loading
 - Left + right files (paired by name: `_L`/`_R`, `-l`/`-r`, `left`/`right` …), side-by-side (parallel or cross-eyed, full or half), over-under, interleaved, **MPO** and **JPS** files.
 - Whole folders; **left and right folders** (pairs by name, by the EXIF capture time or by order); subfolders.
-- Mirror and beam-splitter rigs: either view can be flipped.
-- **Sessions** save the whole list with every adjustment, so you can continue later.
+- Mirror and beam-splitter rigs and cameras on their side: either view can be **flipped** and **rotated** (90° / 180° / 270°), for images, time-lapses and video clips; the rotation tag of phone videos is applied.
+- **Sessions** save the whole list with every adjustment, so you can continue later. Images corrected in another program can take the place of the originals and keep all settings — found by the same name, a name pattern (e.g. “_edit”) or the capture time; **Replace file…** does the same in the list.
 
 ### Automatic alignment
 - Finds thousands of matching details in both views (OpenCV: AKAZE / ORB, robust RANSAC) and corrects **rotation, size, vertical shift and vertical / horizontal perspective** with an exact camera model.
 - Places the **stereo window** at the nearest object, so nothing comes out of the frame unintentionally.
 - Corrects lens barrel distortion; **Auto-align all** processes a whole list.
 - **Manual points** with a magnifier and sub-pixel matching, when automatic alignment is not enough.
-- **Fine-tuning** of every value, and applying the values of one image to a whole series (fixed rigs, time-lapses).
+- **Fine-tuning** of every value, and applying the values of one image to a whole series (fixed rigs, time-lapses) — all at once or per section (fine-tuning, crop, floating window, brightness / colour), with undo.
 
 ### Depth control
 - **Positive, negative and overall depth** and the largest height difference, in % of the image width, for the projected aspect ratio.
