@@ -46,6 +46,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - Corrects lens barrel distortion; **Auto-align all** processes a whole list.
 - **Manual points** with a magnifier and sub-pixel matching, when automatic alignment is not enough.
 - **Fine-tuning** of every value, and applying the values of one image to a whole series (fixed rigs, time-lapses) — all at once or per section (fine-tuning, crop, floating window, brightness / colour), with undo.
+- **Already aligned images** (e.g. from StereoPhoto Maker): *only measure depth* finds the matching points and measures depth, extreme points and the remaining vertical error without changing the image.
 
 ### Depth control
 - **Positive, negative and overall depth** and the largest height difference, in % of the image width, for the projected aspect ratio.
@@ -58,13 +59,13 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - **Crop** with fixed or free aspect ratio, edited directly on the image, snapping to the image borders.
 - **Floating window**: black stripes that bring the image edges forward (automatic or manual).
 - **Brightness and colour matching** of the two views (automatic, plus manual levels, contrast, saturation, temperature and tint).
-- Views: anaglyphs (several kinds, including Dubois), side-by-side parallel / cross-eyed, **Difference (L − R)**, alternating L / R (flashing), **row / column interleaved** (passive 3D monitors) and **checkerboard** (DLP 3D), single view; zoom, magnifier and grid.
+- Views: anaglyphs (several kinds, including Dubois), side-by-side parallel / cross-eyed, **Difference (L − R)**, alternating L / R (flashing), **row / column interleaved** (passive 3D monitors) and **checkerboard** (DLP 3D), single view; zoom, magnifier and grid; **image only** on the whole screen (key I).
 
 ![Difference view: identical areas become grey](docs/screenshots/03_difference_view.jpg)
 
 ### Saving
 - Side-by-side (full / half, parallel / cross-eyed), over-under (full / half), **MPO**, separate left + right JPGs, interlaced, anaglyph.
-- **Size per view**: original, fit inside Full HD / 4K UHD / any size, long side, width or scale.
+- **Size per view**, separately for images and for videos: original, Full HD / 4K UHD / any W × H, long side, width or scale; for a fixed size the whole image with **black bars**, the frame **filled** (edges trimmed) or the whole image without bars.
 - High-quality JPEG with selectable chroma subsampling; EXIF data kept; depth values in the file name (optional).
 - **Save all** saves the whole list (and renders all video clips).
 
@@ -76,23 +77,24 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 ![Compose: four stereo photos in one picture](docs/screenshots/04_compose.jpg)
 
 ### Video
-- **Stereo video clips** (side-by-side or top-bottom): one frame is aligned with all the tools above; **key frames** follow changes during the clip, then every frame is warped on the graphics card and saved as MP4 (H.264, HEVC, AV1 or VP9) with the 3D tag for YouTube and VR players. Videos keep the frame rate of their source by default; mixed frame rates are pointed out before rendering.
+- **Stereo video clips** (side-by-side or top-bottom): one frame is aligned with all the tools above; **key frames** follow changes during the clip, then every frame is warped on the graphics card and saved as MP4 (H.264, HEVC, AV1 or VP9) with the 3D tag for YouTube and VR players. Videos keep the frame rate of their source by default; mixed frame rates are pointed out before rendering. The preview plays with sound.
 - **Left + right video files** from two cameras: synchronised automatically by the sound (or by the motion).
 - **Stereo from a mono video** taken while moving sideways (car, train, walking): the delay between the two views is found for a chosen depth, optionally adapted during the clip.
 - **Time-lapses**: a folder of stereo images becomes one entry, aligned once (or with key frames) and rendered at any frame rate.
 - In the desktop program **ffmpeg** (if installed) reads other formats (AVI, MKV …) and can convert the results.
 
 ### Create stereo show
-- A slide show from finished stereo images and video clips: gentle zoom, panning and depth motion, transitions, text slides, music, narration and other sounds (with automatic volume reduction under speech), rendered as an MP4 video.
+- A slide show from the stereo images and video clips: gentle zoom, panning and depth motion, transitions, text slides, music, narration and other sounds (with automatic volume reduction under speech), rendered as an MP4 video. The images and clips of the list are added automatically, aligned as they are; finished files can be added too.
 
 ![Create stereo show](docs/screenshots/06_stereo_show.jpg)
 
 ### Second screen
 - A separate window that shows **only the image**, aligned, cropped and corrected, on another monitor, projector or 3D TV, and follows every change you make. While Compose is open it shows the composition.
 - Formats: side-by-side and top-bottom (full or half), row or column interleaved (passive 3D monitors), checkerboard (DLP projectors), anaglyphs, single view. Full screen with a double-click.
+- Each half can be **mirrored or rotated** for mirror stereoscopes, e.g. two monitors joined into one screen and viewed through mirrors.
 
 ### Help
-- Built-in help in **English, German, French, Dutch and Slovenian**; a **?** next to every section, and **F1** on any field.
+- Built-in help in **English, German, French, Dutch and Slovenian**; a **?** next to every section, **F1** on any field, and a table of all keyboard shortcuts.
 
 ![Built-in help](docs/screenshots/05_help.jpg)
 
@@ -101,7 +103,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 1. Click the drop field (or drag files or a folder onto it) and load your stereo pairs.
 2. Click **Auto-align all**.
 3. Check each image: the depth values in the **DEPTH** bar, the view (anaglyph, side-by-side, Difference …), the crop.
-4. Correct what is needed under **Fine-tuning** or with **Manual points**.
+4. Correct what is needed under **Fine-tuning** (in *Stereo alignment*), **Crop and window** or with **Manual points**.
 5. Choose the format under **Export** and click **Save all**.
 6. Optional: **Compose** several images into one, or make a slide show with **Create stereo show**.
 

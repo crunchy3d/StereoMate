@@ -1,5 +1,18 @@
 # Changelog
 
+## V0.224 (November 2026)
+
+Changes since V0.221 (V0.222 and V0.223 were not published separately):
+
+- **Already aligned images:** *Images are already aligned — only measure depth* (top of *Stereo alignment*) finds the matching points and measures the depth values, extreme points and the remaining vertical error, but changes nothing (no correction, no stereo window, no crop). The status compares the error with what a new alignment would give and marks clearly worse images with ⚠.
+- **New layout:** *Auto-alignment* is now **Stereo alignment** with *Fine-tuning* at its bottom; the new card **Crop and window** holds the crop and the floating window. *Export* now comes before *Create stereo show*.
+- **Size per view for images and for videos** (Export), each with **Fit** for a fixed size: whole image with black bars (the file is exactly W × H), fill and trim the edges, or whole image without bars. For videos *Original* and *Scale* refer to the original video frame; time-lapses take their size from here (the size fields of the render window are gone). Very large video sizes are pointed out.
+- **Second screen:** the left / top and right / bottom part can each be mirrored (horizontally, vertically) or rotated (90° left / right, 180°) — for mirror stereoscopes, e.g. two monitors joined into one screen. Swap views in the second-screen window is now **X**.
+- **Image only:** key **I** shows only the image on the whole screen; **I** or **Esc** brings the normal window back.
+- **New shortcuts:** **B** Edit crop on / off, **C** Compose, **V** Create stereo show, **M** / **Shift+M** Auto-match current / all. The help has a **⌨ Shortcuts** button with all keys.
+- **Sound in the video clip preview** (🔊 next to Loop; MP4 / MOV).
+- **Create stereo show takes the list:** each time it is opened, the images and clips of the main list that are not in the show yet are added — aligned images as they are now in the main window (they follow later changes), rendered clips from their rendered file. For images without alignment or depth values you choose: measure their depth, add without depth (not counted in the show's depth values) or add only the aligned ones. **Add images of the list** adds missing ones again.
+
 ## V0.221 (November 2026)
 
 Changes since V0.218 (V0.219 and V0.220 were not published separately):
