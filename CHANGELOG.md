@@ -1,5 +1,16 @@
 # Changelog
 
+## V0.230 (November 2026)
+
+Changes since V0.224 (V0.225–V0.229 were not published separately):
+
+- **Depth points:** in *Stereo alignment → Depth points*, **Set nearest point** / **Set farthest point** let you mark the nearest and farthest detail yourself when the automatic ones are wrong (e.g. repeating patterns such as tiles). They replace the automatic depth values (DEPTH bar marked with ✋, warnings, file names, depth folders, Compose, stereo show) but are not used for the alignment. The stereo window is placed at your nearest point. Saved in sessions; images only.
+- **Limit positive depth to [3.333] %** (*Stereo window & options*, value of your choice): when the scene is deeper behind the window than the limit, it is shifted forward; the overall depth stays the same. The shift stops before an object at the left or right edge would come in front of the window, unless **Use floating window if needed** is ticked: then the Auto floating window covers those edge objects.
+- **Manual points:** when no partner is found in the other view, you can place it yourself (**Place it myself**). Points placed or moved by you are never rejected automatically, only marked “check”.
+- **New file types:** JPS, PNG, WebP and TIFF besides JPG, with optional **stereo tags** (JPS header with layout and eye order, PNG sTER chunk). TIFF images (8 / 16 bit) can be loaded; JPS and PNG stereo tags set the input format automatically.
+- **Second screen:** reliable monitor detection; new choices **Two separate screens** (one view each, e.g. two projectors), **Other screens together** and **All screens together**; Esc closes the second-screen window. **Video clips and compositions play on the second screen(s)** at full quality and in step with the main window.
+- **Image only (I):** the image fills the screen exactly (the crop, no margins); the main window can be mirrored in this mode (*View* bar) for mirror stereoscopes; pressing I during playback keeps playing.
+
 ## V0.224 (November 2026)
 
 Changes since V0.221 (V0.222 and V0.223 were not published separately):

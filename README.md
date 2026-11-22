@@ -35,7 +35,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 ## What StereoMate does
 
 ### Loading
-- Left + right files (paired by name: `_L`/`_R`, `-l`/`-r`, `left`/`right` …), side-by-side (parallel or cross-eyed, full or half), over-under, interleaved, **MPO** and **JPS** files.
+- Left + right files (paired by name: `_L`/`_R`, `-l`/`-r`, `left`/`right` …), side-by-side (parallel or cross-eyed, full or half), over-under, interleaved, **MPO** and **JPS** files, JPG, PNG, WebP and **TIFF** (8 or 16 bit). The stereo tags of JPS and PNG files set the format automatically.
 - Whole folders; **left and right folders** (pairs by name, by the EXIF capture time or by order); subfolders.
 - Mirror and beam-splitter rigs and cameras on their side: either view can be **flipped** and **rotated** (90° / 180° / 270°), for images, time-lapses and video clips; the rotation tag of phone videos is applied.
 - **Sessions** save the whole list with every adjustment, so you can continue later. Images corrected in another program can take the place of the originals and keep all settings — found by the same name, a name pattern (e.g. “_edit”) or the capture time; **Replace file…** does the same in the list.
@@ -44,7 +44,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - Finds thousands of matching details in both views (OpenCV: AKAZE / ORB, robust RANSAC) and corrects **rotation, size, vertical shift and vertical / horizontal perspective** with an exact camera model.
 - Places the **stereo window** at the nearest object, so nothing comes out of the frame unintentionally.
 - Corrects lens barrel distortion; **Auto-align all** processes a whole list.
-- **Manual points** with a magnifier and sub-pixel matching, when automatic alignment is not enough.
+- **Manual points** with a magnifier and sub-pixel matching, when automatic alignment is not enough. The partner in the other view is found automatically; where there is too little detail, you place it yourself.
 - **Fine-tuning** of every value, and applying the values of one image to a whole series (fixed rigs, time-lapses) — all at once or per section (fine-tuning, crop, floating window, brightness / colour), with undo.
 - **Already aligned images** (e.g. from StereoPhoto Maker): *only measure depth* finds the matching points and measures depth, extreme points and the remaining vertical error without changing the image.
 
@@ -52,6 +52,8 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - **Positive, negative and overall depth** and the largest height difference, in % of the image width, for the projected aspect ratio.
 - Colour warnings above the usual comfort limits (3.334 % / 4 %); too deep results can be saved into separate folders.
 - **Extreme points**: the nearest and farthest point and the point of the largest height difference are marked in the image.
+- **Depth points**: when the automatic nearest or farthest point is wrong (e.g. repeating patterns such as tiles), you mark it yourself; the depth values and the stereo window then use your points.
+- **Limit positive depth** (e.g. to 3.333 %): too deep scenes are shifted forward, as far as no object at the left or right edge would break the window, or fully with an automatic floating window.
 
 ![Side-by-side view with the extreme points](docs/screenshots/02_side_by_side_extreme_points.jpg)
 
@@ -64,7 +66,8 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 ![Difference view: identical areas become grey](docs/screenshots/03_difference_view.jpg)
 
 ### Saving
-- Side-by-side (full / half, parallel / cross-eyed), over-under (full / half), **MPO**, separate left + right JPGs, interlaced, anaglyph.
+- Side-by-side (full / half, parallel / cross-eyed), over-under (full / half), **MPO**, separate left + right files, interlaced, anaglyph.
+- File types **JPG, JPS, PNG, WebP and TIFF**, optionally with **stereo tags** (JPS header, PNG sTER chunk) so that viewers recognise the format.
 - **Size per view**, separately for images and for videos: original, Full HD / 4K UHD / any W × H, long side, width or scale; for a fixed size the whole image with **black bars**, the frame **filled** (edges trimmed) or the whole image without bars.
 - High-quality JPEG with selectable chroma subsampling; EXIF data kept; depth values in the file name (optional).
 - **Save all** saves the whole list (and renders all video clips).
@@ -92,6 +95,7 @@ The web version has fewer capabilities than the desktop program; see [Desktop or
 - A separate window that shows **only the image**, aligned, cropped and corrected, on another monitor, projector or 3D TV, and follows every change you make. While Compose is open it shows the composition.
 - Formats: side-by-side and top-bottom (full or half), row or column interleaved (passive 3D monitors), checkerboard (DLP projectors), anaglyphs, single view. Full screen with a double-click.
 - Each half can be **mirrored or rotated** for mirror stereoscopes, e.g. two monitors joined into one screen and viewed through mirrors.
+- **Two separate screens** (one view on each, e.g. two projectors), or one image spread over several screens. Video clips and compositions play on the second screen(s) in step with the main window.
 
 ### Help
 - Built-in help in **English, German, French, Dutch and Slovenian**; a **?** next to every section, **F1** on any field, and a table of all keyboard shortcuts.
